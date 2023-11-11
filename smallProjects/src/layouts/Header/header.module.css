@@ -1,6 +1,10 @@
 .header {
   max-width: 100vw;
   min-height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,9 +39,16 @@
   border: none;
   color: var(--color-text-std);
   cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn:hover {
+  scale: 1.1;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
 }
 
 .title {
   font-family: var(--font-outfit);
-  font-size: var(--font-size-subTitle);
+  font-size: var(--font-size-para);
 }

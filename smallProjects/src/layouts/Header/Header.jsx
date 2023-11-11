@@ -22,8 +22,13 @@ export const Header = () => {
 
       <p className={styles.title}>Small React Project</p>
 
-      <button className={styles.btn} onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? (
+      <button
+        className={styles.btn}
+        onClick={() => {
+          darkMode === "dark" ? setDarkMode("") : setDarkMode("dark");
+        }}
+      >
+        {darkMode === "dark" ? (
           <SunIcon width="20px" height="20px" />
         ) : (
           <MoonIcon width="20px" height="20px" />

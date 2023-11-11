@@ -8,10 +8,16 @@ import { createContext } from "react";
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("DarkMode") || ""
+  );
+
+  useEffect(() => {
+    localStorage.setItem("DarkMode", darkMode);
+  }, [darkMode]);
 
   return (
-    <div id="app" className={darkMode ? "dark" : ""}>
+    <div id="app" className={darkMode}>
       <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
         <Routes>
           <Route

@@ -1,3 +1,52 @@
 .container {
+  max-width: 1380px;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
   color: var(--color-text-std);
+}
+
+.presentation {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.title {
+  font-family: var(--font-outfit);
+  font-size: var(--font-size-title);
+  line-height: 4.5rem;
+}
+
+.title span {
+  background: -webkit-linear-gradient(
+    100deg,
+    var(--color-p--800),
+    var(--color-p--400)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title i {
+  font-style: italic;
+  font-weight: 200;
+  font-size: var(--font-size-subTitle);
+}
+
+.text {
+  font-family: var(--font-roboto);
+  font-size: var(--font-size-para);
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.buttonsGrid {
+  display: grid;
 }

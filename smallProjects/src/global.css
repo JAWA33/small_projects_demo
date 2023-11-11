@@ -10,8 +10,8 @@
 
   /* font sizes */
   --font-size-base: 1rem;
-  --font-size-title: 4rem;
-  --font-size-subTitle: 1.5rem;
+  --font-size-title: 4.5rem;
+  --font-size-subTitle: 2.5rem;
   --font-size-para: 1.25rem;
   --font-size-base: 1rem;
 
@@ -46,6 +46,7 @@
 
   /* Gaps */
   --gap-std: 1rem;
+  --gap-2x: 2rem;
 
   /* Paddings */
   --padding-small: 0.5rem;
@@ -57,6 +58,10 @@
   --br-half: 0.5rem;
 
   /* Effects : Shadow, etc ...*/
+}
+
+#app {
+  position: relative;
 }
 
 .dark {

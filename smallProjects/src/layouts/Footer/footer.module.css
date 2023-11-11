@@ -1,0 +1,41 @@
+.footer {
+  max-width: 100vw;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(-90deg, var(--color-p--400), var(--color-p--200));
+  color: var(--color-text-std);
+  padding-right: var(--padding-2x);
+  padding-left: var(--padding-2x);
+}
+.mainWebSite {
+  font-family: var(--font-roboto);
+  font-size: var(--font-size-base);
+  font-style: italic;
+}
+
+.mainWebSite span a {
+  font-family: var(--font-outfit);
+  font-style: normal;
+}
+
+.mainWebSite span a:hover {
+  text-decoration: underline;
+}
+
+.socialNetWorks {
+  display: flex;
+  gap: var(--gap-2x);
+}
+
+.socialNetWorks a {
+  opacity: 0.7;
+}
+.socialNetWorks a:hover {
+  scale: 1.1;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
