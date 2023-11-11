@@ -5,8 +5,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: var(--color-bg-std);
+
+  background: linear-gradient(90deg, var(--color-p--400), var(--color-p--200));
   color: var(--color-text-std);
+  padding-right: var(--padding-2x);
+  padding-left: var(--padding-2x);
 }
 .logoContainer {
   display: flex;
@@ -18,4 +21,23 @@
 .logo {
   height: 40px;
   fill: var(--color-text-std);
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 40px;
+  padding: 1rem;
+  background: none;
+  border: none;
+  color: var(--color-text-std);
+  cursor: pointer;
+}
+
+.title {
+  font-family: var(--font-outfit);
+  font-size: var(--font-size-subTitle);
 }

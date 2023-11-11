@@ -1,4 +1,3 @@
 .container {
-  background: #000;
-  color: white;
+  color: var(--color-text-std);
 }
