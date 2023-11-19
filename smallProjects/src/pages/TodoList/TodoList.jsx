@@ -1,7 +1,7 @@
 import React from "react";
 import { Presentation } from "../../components/Presentation/Presentation";
 import { BackButton } from "../../components/BackButton/BackButton";
-
+import TodoListApp from "../../components/TodoListApp/TodoListApp";
 export const TodoList = () => {
   return (
     <div className="container">
@@ -13,6 +13,7 @@ export const TodoList = () => {
       >
         <BackButton />
       </Presentation>
+      <TodoListApp />
     </div>
   );
 };

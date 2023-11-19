@@ -6,6 +6,7 @@ import { Home } from "./pages/Home/Home";
 import { Clock } from "./pages/Clock/Clock";
 import { createContext } from "react";
 import { TodoList } from "./pages/TodoList/TodoList";
+import { Theme } from "@radix-ui/themes";
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -18,36 +19,38 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div id="app" className={darkMode}>
-      <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <LayoutPage>
-                <Home />
-              </LayoutPage>
-            }
-          />
-          <Route
-            path="/clock"
-            element={
-              <LayoutPage>
-                <Clock />
-              </LayoutPage>
-            }
-          />
-          <Route
-            path="/todo_list"
-            element={
-              <LayoutPage>
-                <TodoList />
-              </LayoutPage>
-            }
-          />
-        </Routes>
-      </ThemeContext.Provider>
-    </div>
+    <Theme accentColor="blue" grayColor="blue" panelBackground="solid">
+      <div id="app" className={darkMode}>
+        <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <LayoutPage>
+                  <Home />
+                </LayoutPage>
+              }
+            />
+            <Route
+              path="/clock"
+              element={
+                <LayoutPage>
+                  <Clock />
+                </LayoutPage>
+              }
+            />
+            <Route
+              path="/todo_list"
+              element={
+                <LayoutPage>
+                  <TodoList />
+                </LayoutPage>
+              }
+            />
+          </Routes>
+        </ThemeContext.Provider>
+      </div>
+    </Theme>
   );
 }
 

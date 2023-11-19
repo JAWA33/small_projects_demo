@@ -19,6 +19,7 @@
     var(--color-p--800),
     var(--color-p--400)
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -34,6 +35,12 @@
   font-size: var(--font-size-para);
   font-weight: 300;
   line-height: 2rem;
+}
+
+.return {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 600px) {

@@ -14,7 +14,7 @@ export const Presentation = ({
         {title} <span>{titleColor}</span> <i>{titleItalic}</i>
       </h1>
       <p className={styles.text}>{text}</p>
-      {children}
+      <div className={styles.return}>{children}</div>
     </div>
   );
 };
