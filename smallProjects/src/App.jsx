@@ -5,6 +5,7 @@ import { LayoutPage } from "./layouts/LayoutPage/LayoutPage";
 import { Home } from "./pages/Home/Home";
 import { Clock } from "./pages/Clock/Clock";
 import { createContext } from "react";
+import { TodoList } from "./pages/TodoList/TodoList";
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -33,6 +34,14 @@ function App() {
             element={
               <LayoutPage>
                 <Clock />
+              </LayoutPage>
+            }
+          />
+          <Route
+            path="/todo_list"
+            element={
+              <LayoutPage>
+                <TodoList />
               </LayoutPage>
             }
           />

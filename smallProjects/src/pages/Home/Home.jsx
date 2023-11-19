@@ -1,28 +1,27 @@
 import React from "react";
-import styles from "./home.module.css";
+
 import { ButtonAccessToProject } from "../../components/ButtonAccessToProject/ButtonAccessToProject";
 import { SunIcon, ListBulletIcon, LapTimerIcon } from "@radix-ui/react-icons";
+import { Presentation } from "../../components/Presentation/Presentation";
 
 export const Home = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.presentation}>
-        <h1 className={styles.title}>
-          Discover <span>Some Features</span> <i>for your website</i>
-        </h1>
-        <p className={styles.text}>
-          Explore here a few small demonstration projects to showcase what I can
-          create for you and your upcoming app.
-        </p>
-      </div>
+    <div className="container">
+      <Presentation
+        title="Discover"
+        titleColor="Some Features"
+        titleItalic="for your website"
+        text="Explore here a few small demonstration projects to showcase what I can
+        create for you and your upcoming app."
+      />
       <div>
         <h2>Select a project :</h2>
-        <nav className={styles.buttonsGrid}>
+        <nav style={{ display: "grid" }}>
           <ul>
             <ButtonAccessToProject
               icon={<ListBulletIcon width="24px" height="24px" />}
               text="Todo List"
-              link="/clock"
+              link="/todo_list"
             />
             <ButtonAccessToProject
               icon={<LapTimerIcon width="24px" height="24px" />}

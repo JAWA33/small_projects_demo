@@ -11,9 +11,9 @@
   /* font sizes */
   --font-size-base: 1rem;
   --font-size-title: 4.5rem;
+  --font-size-titleSmall: 3.5rem;
   --font-size-subTitle: 2.5rem;
   --font-size-para: 1.25rem;
-  --font-size-base: 1rem;
 
   /* Colors Primary*/
   --color-p--50: #ecfeff;
@@ -54,6 +54,7 @@
   --padding-2x: 2rem;
 
   /* Border radiuses */
+  --br-double: 2rem;
   --br-std: 1rem;
   --br-half: 0.5rem;
 
@@ -86,4 +87,25 @@
   --color-p--200: #155e75;
   --color-p--100: #164e63;
   --color-p--50: #083344;
+}
+
+.container {
+  max-width: 1380px;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 4rem;
+  color: var(--color-text-std);
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 4rem;
+  }
 }

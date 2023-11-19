@@ -1,14 +1,3 @@
-.container {
-  max-width: 1380px;
-  min-height: calc(100vh - 120px);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  margin: auto;
-  color: var(--color-text-std);
-}
-
 .presentation {
   max-width: 600px;
   display: flex;
@@ -47,6 +36,20 @@
   line-height: 2rem;
 }
 
-.buttonsGrid {
-  display: grid;
+@media only screen and (max-width: 600px) {
+  .presentation {
+    max-width: 400px;
+  }
+  .title {
+    font-family: var(--font-outfit);
+    font-size: var(--font-size-titleSmall);
+  }
+
+  .title i {
+    display: block;
+    font-size: var(--font-size-subTitle);
+  }
+  .text {
+    font-size: var(--font-size-std);
+  }
 }

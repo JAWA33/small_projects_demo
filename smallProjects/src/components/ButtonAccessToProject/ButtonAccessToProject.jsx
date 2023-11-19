@@ -7,7 +7,7 @@ export const ButtonAccessToProject = ({ text, link, icon, colorVariation }) => {
 
   return (
     <li onClick={() => navigate(link)} className={styles.element}>
-      <icon>{icon}</icon>
+      <div>{icon}</div>
       {text}
       <span />
       <span />

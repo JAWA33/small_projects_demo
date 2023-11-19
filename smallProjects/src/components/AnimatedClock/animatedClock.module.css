@@ -1,0 +1,72 @@
+.animatedContainer {
+  --hourWidth: position: relative;
+  /* overflow: hidden; */
+  width: 500px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 10vh;
+  border: 1px solid var(--color-p--200);
+  box-shadow:
+    inset 15px 15px 20px var(--color-p--100),
+    3px 3px 15px var(--color-p--400);
+}
+.animatedContainer svg {
+  position: absolute;
+  transition: rotate 0.5s ease-in-out;
+}
+.animatedContainer svg circle {
+  r: 252px;
+  stroke-width: 6px;
+  stroke: var(--color-p--800);
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1785;
+  filter: blur(2px);
+}
+
+.wrapper {
+  position: absolute;
+  transition: rotate 1s ease-in-out;
+}
+
+.hour,
+.min {
+  position: absolute;
+  top: -215px;
+  left: 0px;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.hour {
+  width: 60px;
+  background: var(--color-bg-std);
+  box-shadow:
+    2px 2px 2px var(--color-p--200),
+    -2px 1px 1px var(--color-p--600);
+}
+
+.min {
+  width: 40px;
+  background: var(--color-p--50);
+  box-shadow:
+    inset 2px 1px 2px var(--color-p--200),
+    2px 1px 1px var(--color-p--600);
+}
+
+@media only screen and (max-width: 600px) {
+  .animatedContainer {
+    width: 400px;
+    margin-top: 7vh;
+  }
+  .animatedContainer svg circle {
+    r: 200px;
+  }
+  .hour,
+  .min {
+    top: -165px;
+  }
+}

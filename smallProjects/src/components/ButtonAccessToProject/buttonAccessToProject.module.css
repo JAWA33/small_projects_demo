@@ -37,7 +37,7 @@
   z-index: -1;
 }
 
-.element icon {
+.element div {
   height: auto;
   display: flex;
   flex-direction: row;
