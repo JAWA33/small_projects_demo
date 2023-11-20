@@ -1,6 +1,5 @@
-import { Box, Card, Flex, Text, Button, Avatar } from "@radix-ui/themes";
+import { Card, Flex, Text, Button, Avatar } from "@radix-ui/themes";
 import React from "react";
-import styles from "./taskDetail.module.css";
 
 export const TaskDetail = ({
   id,
@@ -38,12 +37,13 @@ export const TaskDetail = ({
       variant="classic"
       id={id}
       draggable
-      style={
-        ({ cursor: "move" },
-        { backgroundColor: status === "check" ? "#67e8f9" : "" })
-      }
+      style={{
+        width: "450px",
+        backgroundColor: status === "check" ? "#67e8f9" : "",
+        cursor: "grabbing",
+      }}
     >
-      <Flex gap="5" align="center" justify="between">
+      <Flex gap="9" align="center" justify="between">
         <Flex gap="5" align="center">
           <Avatar
             variant="solid"
@@ -52,22 +52,26 @@ export const TaskDetail = ({
             fallback={IconLetter}
             color={colorThemeForIconLetter()}
           />
-          <Box>
-            <Text as="div" size="3" weight="bold" color="mauve">
-              {action}
-            </Text>
-          </Box>
+          <Text as="div" size="3" weight="bold" color="mauve">
+            {action}
+          </Text>
         </Flex>
-        <Flex gap="9" align="center">
+        <Flex gap="3" align="center">
           <Button
             color={status === "check" ? "blue" : "red"}
             variant={status === "check" ? "classic" : "soft"}
             onClick={() => toggleStatus(id)}
+            style={{ cursor: "pointer" }}
           >
-            {status === "check" ? "Do it again" : "Finish task"}
+            {status === "check" ? "Do it again" : "Finish"}
           </Button>
-          <Button color="red" variant="classic" onClick={() => deleteTask(id)}>
-            Delete Task
+          <Button
+            color="red"
+            variant="classic"
+            onClick={() => deleteTask(id)}
+            style={{ cursor: "pointer" }}
+          >
+            Delete
           </Button>
         </Flex>
       </Flex>

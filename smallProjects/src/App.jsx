@@ -7,6 +7,7 @@ import { Clock } from "./pages/Clock/Clock";
 import { createContext } from "react";
 import { TodoList } from "./pages/TodoList/TodoList";
 import { Theme } from "@radix-ui/themes";
+import { QuizGame } from "./pages/QuizGame/QuizGame";
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -44,6 +45,14 @@ function App() {
               element={
                 <LayoutPage>
                   <TodoList />
+                </LayoutPage>
+              }
+            />
+            <Route
+              path="/quiz"
+              element={
+                <LayoutPage>
+                  <QuizGame />
                 </LayoutPage>
               }
             />

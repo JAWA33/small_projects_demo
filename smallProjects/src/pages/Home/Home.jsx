@@ -1,7 +1,12 @@
 import React from "react";
 
 import { ButtonAccessToProject } from "../../components/ButtonAccessToProject/ButtonAccessToProject";
-import { SunIcon, ListBulletIcon, LapTimerIcon } from "@radix-ui/react-icons";
+import {
+  SunIcon,
+  ListBulletIcon,
+  LapTimerIcon,
+  CheckIcon,
+} from "@radix-ui/react-icons";
 import { Presentation } from "../../components/Presentation/Presentation";
 
 export const Home = () => {
@@ -27,6 +32,11 @@ export const Home = () => {
               icon={<LapTimerIcon width="24px" height="24px" />}
               text="Digital Clock"
               link="/clock"
+            />
+            <ButtonAccessToProject
+              icon={<CheckIcon width="24px" height="24px" />}
+              text="Quiz Game"
+              link="/quiz"
             />
           </ul>
         </nav>

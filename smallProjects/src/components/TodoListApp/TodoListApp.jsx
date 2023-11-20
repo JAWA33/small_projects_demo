@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import styles from "./todoListApp.module.css";
 import { Button, Container, Flex, Text, TextField } from "@radix-ui/themes";
 import { TaskDetail } from "./TaskDetail/TaskDetail";
-// import { TaskDetail } from "./TaskDetail";
 
 const TodoListApp = () => {
   const newTaskValue = useRef();
@@ -59,29 +57,25 @@ const TodoListApp = () => {
   }, [arrayOfTasks]);
 
   return (
-    <div>
-      <Text>Add new task to your todo list</Text>
-
-      <Flex
-        direction="row"
-        justify="between"
-        align="center"
-        style={{ margin: "2rem 0" }}
+    <Flex direction="column" justify="between" align="start" gap="5">
+      <Text as="h2">Add new task to your todo list</Text>
+      <TextField.Input
+        variant="surface"
+        size="3"
+        placeholder="What is your task ?"
+        ref={newTaskValue}
+        id="inputTask"
+        style={{ width: "450px" }}
+      />
+      <Button
+        onClick={addToTask}
+        variant="classic"
+        color="cyan"
+        style={{ cursor: "pointer" }}
       >
-        <TextField.Input
-          variant="surface"
-          size="3"
-          placeholder="What is your task ?"
-          ref={newTaskValue}
-          id="inputTask"
-          style={{ width: "400px" }}
-        />
-        <Button onClick={addToTask} variant="classic">
-          Add task
-        </Button>
-      </Flex>
-
-      <Container size="2" grow="1">
+        Add task
+      </Button>
+      <Container size="3" grow="1">
         {arrayOfTasks?.map((task, index) => (
           <TaskDetail
             key={index}
@@ -94,7 +88,7 @@ const TodoListApp = () => {
           />
         ))}
       </Container>
-    </div>
+    </Flex>
   );
 };
 
