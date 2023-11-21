@@ -8,6 +8,7 @@ import { createContext } from "react";
 import { TodoList } from "./pages/TodoList/TodoList";
 import { Theme } from "@radix-ui/themes";
 import { QuizGame } from "./pages/QuizGame/QuizGame";
+import { TicTacToe } from "./pages/TicTacToe/TicTacToe";
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -53,6 +54,14 @@ function App() {
               element={
                 <LayoutPage>
                   <QuizGame />
+                </LayoutPage>
+              }
+            />
+            <Route
+              path="/tictactoe"
+              element={
+                <LayoutPage>
+                  <TicTacToe />
                 </LayoutPage>
               }
             />

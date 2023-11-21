@@ -6,6 +6,8 @@ import {
   ListBulletIcon,
   LapTimerIcon,
   CheckIcon,
+  ValueIcon,
+  Cross1Icon,
 } from "@radix-ui/react-icons";
 import { Presentation } from "../../components/Presentation/Presentation";
 
@@ -37,6 +39,16 @@ export const Home = () => {
               icon={<CheckIcon width="24px" height="24px" />}
               text="Quiz Game"
               link="/quiz"
+            />
+            <ButtonAccessToProject
+              icon={
+                <>
+                  <ValueIcon width="24px" height="24px" />
+                  <Cross1Icon width="24px" height="24px" />
+                </>
+              }
+              text="Tic Tac Toe"
+              link="/tictactoe"
             />
           </ul>
         </nav>

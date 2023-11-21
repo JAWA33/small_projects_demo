@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Questions } from "../../helpers/QuestionsBank";
 import { Button, Flex, Text } from "@radix-ui/themes";
 import { ContextQuizz } from "../../helpers/ContextQuizz";
+import styles from "./quiz.module.css";
 
 export const StartQuiz = () => {
   const { setQuizState, setScore } = useContext(ContextQuizz);
@@ -16,19 +17,12 @@ export const StartQuiz = () => {
     if (currentQuestion < Questions.length - 1) {
       setCurrentQuestion((prevCurrentQuestion) => prevCurrentQuestion + 1);
     } else {
-      // Go to the result
       setQuizState("endQuiz");
     }
   };
 
   return (
-    <Flex
-      gap="5"
-      align="center"
-      direction="column"
-      justify="center"
-      style={{ width: "500px", marginTop: "50px" }}
-    >
+    <div className={styles.startQuiz}>
       <Text as="h2">{Questions[currentQuestion].prompt}</Text>
       <Button
         size="3"
@@ -66,6 +60,6 @@ export const StartQuiz = () => {
       >
         {Questions[currentQuestion].optionD}
       </Button>
-    </Flex>
+    </div>
   );
 };

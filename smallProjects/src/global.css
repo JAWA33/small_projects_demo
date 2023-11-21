@@ -108,7 +108,7 @@
   color: var(--color-text-std);
 }
 
-.container--todo {
+.container--onTop {
   align-items: flex-start;
 }
 
@@ -120,7 +120,7 @@
     padding-bottom: 6rem;
     gap: 4rem;
   }
-  .container--todo {
-    align-items: "center";
+  .container--onTop {
+    align-items: center;
   }
 }

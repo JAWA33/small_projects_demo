@@ -5,13 +5,14 @@ import { StartQuiz } from "../../components/QuizState/StartQuiz";
 import { MenuQuiz } from "../../components/QuizState/MenuQuiz";
 import { EndQuiz } from "../../components/QuizState/EndQuiz";
 import { ContextQuizz } from "../../helpers/ContextQuizz";
+import { Container } from "@radix-ui/themes";
 
 export const QuizGame = () => {
   const [quizState, setQuizState] = useState("menuQuiz");
   const [score, setScore] = useState(0);
 
   return (
-    <div className="container ">
+    <div className="container container--onTop">
       <ContextQuizz.Provider
         value={{ quizState, setQuizState, score, setScore }}
       >
@@ -33,7 +34,6 @@ export const QuizGame = () => {
             {quizState === "menuQuiz" && <MenuQuiz />}
           </div>
         </Presentation>
-
         {quizState === "startQuiz" && <StartQuiz />}
         {quizState === "endQuiz" && <EndQuiz />}
       </ContextQuizz.Provider>
