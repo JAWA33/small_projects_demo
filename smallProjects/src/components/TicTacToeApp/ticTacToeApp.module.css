@@ -1,4 +1,5 @@
 .gameBoard {
+  position: relative;
   width: 100%;
   max-width: 400px;
   aspect-ratio: 1;
@@ -23,12 +24,19 @@
   cursor: pointer;
 }
 
-.square span {
+#blue {
   background: -webkit-linear-gradient(
     80deg,
     var(--color-p--800),
     var(--color-p--400)
   );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#red {
+  background: -webkit-linear-gradient(120deg, red, rgb(200, 67, 67));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,4 +81,38 @@
 .gameBoard .boardRows:nth-child(3) .square:nth-child(3) {
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
+}
+
+.popup {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 100px;
+  background: -webkit-linear-gradient(
+    80deg,
+    var(--color-p--900),
+    var(--color-p--700)
+  );
+  border-radius: 1rem;
+  color: var(--color-text-inv);
+  font-family: var(--font-outfit);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  scale: 0;
+  animation: showPopup 0.3s ease-out forwards;
+}
+
+.popup p {
+  font-family: var(--font-outfit);
+  font-size: var(--font-size-para);
+  font-style: italic;
+}
+
+@keyframes showPopup {
+  to {
+    scale: 1;
+  }
 }
